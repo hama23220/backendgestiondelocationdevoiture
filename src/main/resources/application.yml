@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/gestiondelocation?createDatabaseIfNotExist=true&userSSL=false&useUniCode=true
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    database: MYSQL
+    show-sql: false
+    #showsql pour que la requete ne s'affiche pas lors de l'envois en http a mon api
+    #hibernate c'est pour la securite
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.MySQL5Dialect
+
+server:
+  port: 8082
+
+flickr:
+  apiKey: 1de402423ac8703846de58449cfc4514
+  apiSecret: 00f6ae2355bba7a6
+  appKey: 72157718959782793-d8dc69850c90da76
+  appSecret: 9e6a5569898f00aa
